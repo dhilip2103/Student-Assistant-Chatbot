@@ -1,0 +1,11 @@
+Django
+langchain
+langchain-groq
+chromadb
+pypdf2
+pdfplumber
+docx2txt
+python-dotenv
+transformers
+sentence-transformers
+tqdm
