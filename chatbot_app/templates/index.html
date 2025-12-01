@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsApp-style Chat UI</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="shell">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar">
+        <div class="brand">
+          <img class="logo" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" />
+          <div>
+            <div class="title">Student Assistant</div>
+            <div class="status">Frontend Demo</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="pill">
+            <input id="fileInput" type="file" style="display:none;">
+            <button id="pickBtn" class="btn">+ Upload</button>
+            <div class="file-label" id="fileLabel">No file chosen</div>
+          </div>
+
+          <div style="display:flex; gap:8px;">
+            <button id="continueBtn" class="btn">Continue</button>
+            <button id="restartBtn" class="btn">Restart</button>
+          </div>
+
+          <div class="tips">
+            Use Enter to send<br>Shift+Enter → New line
+          </div>
+        </div>
+
+        <div class="chats-list">
+          <div class="chat-card">
+            <div class="meta">Full-screen centered chat UI</div>
+          </div>
+          <div class="chat-card">
+            <div class="meta">Messages: Right user | Left bot</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CHAT PANEL -->
+      <section class="chat-panel">
+        <div class="chat-header">
+          <div class="title">
+            <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" class="user-pic">
+            <div>
+              <div class="name">Assistant</div>
+              <div class="status">Active now</div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="btn">New chat</button>
+            <button class="btn">Export</button>
+          </div>
+        </div>
+
+        <div id="messages" class="messages"></div>
+
+        <div class="composer">
+          <button class="fab attach" id="attachBtn">+</button>
+          <textarea id="questionInput" class="input" rows="1" placeholder="Ask something..."></textarea>
+          <button class="fab send" id="sendBtn">➤</button>
+        </div>
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <aside class="right-panel">
+        <div class="right-title">Session Info</div>
+        <div class="meta">Uploaded file: <span id="uploadedFile">—</span></div>
+      </aside>
+
+    </div>
+  </div>
+  <script src="{% static 'script.js' %}" defer></script>
+</body>
+</html>
