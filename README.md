@@ -62,5 +62,3 @@ Note
 Keep your .env file private
 
 Do not commit secrets to GitHub
-
-If you w
